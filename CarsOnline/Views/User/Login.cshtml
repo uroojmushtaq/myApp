@@ -1,0 +1,115 @@
+﻿@model CarsOnline.Models.Login
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_FirstView.cshtml";
+}
+
+@section scripts{
+
+
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+    <script>
+
+
+
+       
+     @*   var msg = @ViewBag.msg
+
+            $(function () {
+                $("#btnLogin").click(function () {
+                    if (msg != "") {
+                        alert("Username/Password incorrect!!!");
+                    }
+                    else {
+                        alert("go");
+                    }
+                });
+            });*@
+
+
+
+    </script>
+
+}
+
+
+<link href="~/Content/CSS/Logincss.css" rel="stylesheet" />
+
+<br>
+<br>
+
+<h2 style="color:blue;text-align:center"><b>Please Login First</b></h2>
+
+@using (Html.BeginForm("Login1","User",FormMethod.Post))  
+{  
+    @Html.ValidationSummary(true)   
+    <fieldset>  
+        <legend></legend>  
+       <br />
+       
+        <div class="editor-label">  
+            @Html.LabelFor(model => model.Username)  
+        </div>  
+        <div id="editor-field">  
+            @Html.EditorFor(model => model.Username)  
+            @Html.ValidationMessageFor(model => model.Username)  
+        </div>  
+  
+        <div class="editor-label">  
+            @Html.LabelFor(model => model.Password)  
+        </div>  
+        <div class="editor-field">  
+            @Html.PasswordFor(model => model.Password)  
+            @Html.ValidationMessageFor(model => model.Password)  
+        </div>  
+  
+  
+        <div>  
+
+       <button type="submit"  id="btnLogin">Login</button>
+            
+    <input type="checkbox" checked="checked"> Remember me
+            <br />
+            <p style="color:crimson">@ViewBag.msg</p>
+          
+        </div> 
+     
+        
+         
+        <div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="location.href = '/User/Login';" class="cancelbtn">Cancel</button>
+    <span class="psw"><a href="#">Forgot Password?</a></span>
+  </div>
+       
+    </fieldset>  
+}  
+
+
+
+
+
+
+<!--<form action="/User/Login1" method="post" >
+  
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="txtLogin" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="txtPassword" required>
+        
+    <button type="submit"  id="btnLogin">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="location.href = '/User/Login';" class="cancelbtn">Cancel</button>
+    <span class="psw"><a href="#">Forgot Password?</a></span>
+  </div>
+
+
+</form>
+    -->
+

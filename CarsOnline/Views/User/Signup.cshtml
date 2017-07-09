@@ -1,0 +1,120 @@
+﻿@model CarsOnline.Models.Signup
+
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_FirstView.cshtml";
+}
+
+@section scripts{
+    <script>
+
+       @* var msg = @ViewBag.message
+
+              $(function () {
+                  $(".signupbtn").click(function () {
+                      if (msg != "") {
+                          alert("Username already exist")
+                      }
+                  });
+              });*@
+        
+
+    </script>
+}
+
+<h2 style="color:blue;text-align:center"><b>Welocme to Signup</b></h2>
+<link href="~/Content/CSS/Signupcss.css" rel="stylesheet" />
+
+
+
+@using (Html.BeginForm("Signup1","User",FormMethod.Post))  
+{  
+    @Html.ValidationSummary(true)   
+    <fieldset>  
+        <legend></legend>  
+       <br />
+       
+
+        <div class="editor-label">  
+            @Html.LabelFor(model => model.Username)  
+        </div>  
+        <div id="editor-field">  
+            @Html.EditorFor(model => model.Username)  
+            @Html.ValidationMessageFor(model => model.Username)  
+        </div>  
+
+
+
+          <div class="editor-label">  
+            @Html.LabelFor(model => model.Name)  
+        </div>  
+        <div id="editor-field1">  
+            @Html.EditorFor(model => model.Name)  
+            @Html.ValidationMessageFor(model => model.Name)  
+        </div>  
+
+
+       
+  
+        <div class="editor-label">  
+            @Html.LabelFor(model => model.Password)  
+        </div>  
+        <div class="editor-field">  
+            @Html.PasswordFor(model => model.Password)  
+            @Html.ValidationMessageFor(model => model.Password)  
+        </div>  
+
+
+
+                    <div class="editor-label">  
+            @Html.LabelFor(model => model.ConfirmPassword)  
+        </div>  
+        <div class="editor-field">  
+            @Html.PasswordFor(model => model.ConfirmPassword)  
+            @Html.ValidationMessageFor(model => model.ConfirmPassword)  
+        </div>  
+  
+  
+        <div>  
+             <input type="checkbox" checked="checked"> Remember me
+             <br />
+            <p style="color:crimson">@ViewBag.message</p>
+     
+      <div class="clearfix">
+      <button type="button" onclick ="location.href = '/User/Signup'" class="cancelbtn">Cancel</button>
+      <button type="submit" onclick ="location.href = '/Home/Home'" class="signupbtn">Sign Up</button>
+    </div>
+        
+     
+  </div>
+       
+    </fieldset>  
+}
+
+
+
+
+<!--<form action ="/User/Signup1" method ="post" >
+  <div class="container">
+    <label><b>Email:</b></label>
+    <input type="text" placeholder="Enter Email" name="txtLogin" required>
+       <span>@ViewBag.message</span>
+
+      <label><b>Name:</b></label>
+    <input type="text" placeholder="Enter Name" name="txtName" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="txtPassword" required>
+
+    <label><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <input type="checkbox" checked="checked"> Remember me
+   
+
+    <div class="clearfix">
+      <button type="button" onclick="location.href = '/User/Signup';" class="cancelbtn">Cancel</button>
+      <button type="submit" onclick ="location.href = '/Home/Home'" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+    -->

@@ -1,0 +1,48 @@
+﻿@model CarsOnline.Models.Car
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (Html.BeginForm("Register","RegisterCar",FormMethod.Post))  
+{  
+    @Html.ValidationSummary(true)   
+    <fieldset>  
+        <br />
+        <br />
+        <legend>Register Your Car:</legend>  
+       <br />
+       
+        <div class="editor-label">  
+            @Html.LabelFor(model => model.Name)  
+        </div>  
+        <div id="editor-field">  
+            @Html.EditorFor(model => model.Name)  
+            @Html.ValidationMessageFor(model => model.Name)  
+        </div>  
+  
+        <div class="editor-label">  
+            @Html.LabelFor(model => model.Price)  
+        </div>  
+        <div class="editor-field">  
+            @Html.EditorFor(model => model.Price)  
+            @Html.ValidationMessageFor(model => model.Price)  
+        </div>  
+  
+  
+        <div>  
+            <br />
+
+       <button type="submit"  id="btnLogin">Register</button>
+   
+        </div> 
+     
+        <br />
+         
+        <div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="location.href = '/RegisterCar/Index';" class="cancelbtn">Cancel</button>
+
+  </div>
+       
+    </fieldset>  
+}  

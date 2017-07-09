@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="@Url.Content("~/Content/CSS/style.css")" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <a href="~/Content/fonts/Amble-Light-webfont.ttf"></a>
+<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>   
+<!--slider-->
+    <script src="@Url.Content("~/Content/js/jquery.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/script.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/superfish.js")" type="text/javascript"></script>
+
+    @RenderSection("scripts",false)
+</head>
+    
+    <body>
+
+         <div class="header">                                                                                                                    
+					<div class="box_header_user_menu">                                                                                                                                            
+						<ul class="user_menu"><li class="act first"><a href="RegisterCar/Index"><div class="button-t"><span>Register a Car</span></div></a></li><li class=""><a href="~/RegisterCar/ViewRecord"><div class="button-t"><span>View Previous Record</span></div></a></li><li class="button-t"><a href="~/User/Signup"><div class="button-t"><span>Create an Account</span></div></a></li><li class="last"><a href="~/User/Login"><div class="button-t"><span>Login</span></div></a></li><li class="button-t"><a href="~/User/Logout"><div class="button-t"><span>Logout</span></div></a></li></ul>
+					</div>
+					<div class="header-right">
+						<ul class="follow_icon">
+                            
+							<li><a href="#"><img src="~/Content/Images/icon.png" alt=""/></a></li>
+							<li><a href="#"><img src="~/Content/Images/icon1.png"  alt=""/></a></li>
+							<li><a href="#"><img src="~/Content/Images/icon2.png" alt="" /></a></li>
+							<li><a href="#"><img src="~/Content/Images/icon3.png"  alt=""/></a></li>
+						</ul>
+					</div>
+             <div class="clear"></div> 
+					<div class="header-bot">
+                        <div class="logo">
+							<a href="#"><img src="~/Content/Images/logo.png"  alt=""/></a>
+						</div>
+ 
+					<div class="clear"></div> 
+                          </div>
+             <div class="menu"> 	
+			<div class="top-nav"> 
+					<ul>
+						<li class="active"><a href="Home/Index">Home</a></li>
+						<li><a href="~/Home/About">About</a></li>
+						<li><a href="~/Home/Specials">Specials</a></li>
+						<li><a href="~/Home/New">New</a></li>
+						<li><a href="~/Home/Contact">Contact</a></li>
+					</ul>
+                		
+					<div class="clear"></div>
+				</div>
+		</div>
+
+                        <div>
+                            @RenderBody()
+
+                        </div>
+                           </div>
+           
+        </body>
+    </html>

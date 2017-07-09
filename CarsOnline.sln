@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsOnline", "CarsOnline\CarsOnline.csproj", "{BCD7D7CC-7616-4BBE-8800-AE970BFD75F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsOnline.DAL", "CarsOnline.DAL\CarsOnline.DAL.csproj", "{10755285-9251-40AD-93E2-B87906FE2002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsOnline.Entities", "CarsOnline.Entities\CarsOnline.Entities.csproj", "{6C194033-7A1A-4E8B-B67D-BC19728E4995}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCD7D7CC-7616-4BBE-8800-AE970BFD75F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD7D7CC-7616-4BBE-8800-AE970BFD75F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD7D7CC-7616-4BBE-8800-AE970BFD75F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD7D7CC-7616-4BBE-8800-AE970BFD75F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10755285-9251-40AD-93E2-B87906FE2002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10755285-9251-40AD-93E2-B87906FE2002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10755285-9251-40AD-93E2-B87906FE2002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10755285-9251-40AD-93E2-B87906FE2002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C194033-7A1A-4E8B-B67D-BC19728E4995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C194033-7A1A-4E8B-B67D-BC19728E4995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C194033-7A1A-4E8B-B67D-BC19728E4995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C194033-7A1A-4E8B-B67D-BC19728E4995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

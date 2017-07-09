@@ -1,0 +1,25 @@
+﻿@model List<CarsOnline.Entities.CarsDTO>
+
+@{
+    ViewBag.Title = "ViewRecord";
+}
+
+<h1>Your Record is:</h1>
+
+@{
+   foreach(var item in Model)
+   {
+       
+       
+       <br />
+       <div style ="border:1px double; width:300px; height:75px">
+           <br />
+           <span>Car Name: @item.Name</span> <br />
+           <span>Price: @item.Price</span> <br />
+
+
+
+       </div>
+       
+   }
+}
